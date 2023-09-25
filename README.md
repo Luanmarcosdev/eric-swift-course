@@ -8,6 +8,7 @@ These products were built using Xcode Version 14.3.1
 
 ## List of Projects
 - [Project 1: IMC](https://github.com/Luanmarcosdev/eric-swift-course/tree/main/IMC)
+- [Project 2: Conversors](https://github.com/luanmarcosdev/eric-swift-course/tree/main/Conversors)
 
 ---
 I will update this repository as I progress with my studies
