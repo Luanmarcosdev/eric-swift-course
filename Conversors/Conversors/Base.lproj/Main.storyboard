@@ -74,7 +74,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.22745098039215686" green="0.52156862745098043" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7O-tK-pGX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="e7O-tK-pGX">
                                 <rect key="frame" x="51" y="494" width="291" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
@@ -97,6 +97,7 @@
                         <outlet property="btUnit2" destination="X1t-f9-1fy" id="cA0-D9-ixX"/>
                         <outlet property="lbResult" destination="e7O-tK-pGX" id="e4O-wh-Ud0"/>
                         <outlet property="lbResultUnit" destination="7B4-vU-Az8" id="r4J-La-ozS"/>
+                        <outlet property="lbUnity" destination="yQQ-7t-Y7l" id="eT0-Uj-uM6"/>
                         <outlet property="tfValue" destination="6sZ-VB-74m" id="aXG-gn-AE8"/>
                     </connections>
                 </viewController>
