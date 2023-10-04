@@ -1,6 +1,6 @@
 # Project 4 - SwiftQuiz
 
-This is a quiz app for Swift. It was developed putting into practice the concepts of POO.
+This is a quiz app for Swift. It was developed putting into practice the concepts of POO and arquiteture pattern MVC.
 
 ## Screenshots
 
