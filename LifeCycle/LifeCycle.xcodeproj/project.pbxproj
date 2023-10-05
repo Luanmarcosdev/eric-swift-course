@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CA939A612ACEAEFC001BB26C /* LifeCicle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeCicle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA939A612ACEAEFC001BB26C /* LifeCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA939A642ACEAEFC001BB26C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA939A662ACEAEFC001BB26C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CA939A682ACEAEFC001BB26C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		CA939A582ACEAEFC001BB26C = {
 			isa = PBXGroup;
 			children = (
-				CA939A632ACEAEFC001BB26C /* LifeCicle */,
+				CA939A632ACEAEFC001BB26C /* LifeCycle */,
 				CA939A622ACEAEFC001BB26C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +50,12 @@
 		CA939A622ACEAEFC001BB26C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CA939A612ACEAEFC001BB26C /* LifeCicle.app */,
+				CA939A612ACEAEFC001BB26C /* LifeCycle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CA939A632ACEAEFC001BB26C /* LifeCicle */ = {
+		CA939A632ACEAEFC001BB26C /* LifeCycle */ = {
 			isa = PBXGroup;
 			children = (
 				CA939A642ACEAEFC001BB26C /* AppDelegate.swift */,
@@ -67,15 +67,15 @@
 				CA939A6F2ACEAEFD001BB26C /* LaunchScreen.storyboard */,
 				CA939A722ACEAEFD001BB26C /* Info.plist */,
 			);
-			path = LifeCicle;
+			path = LifeCycle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CA939A602ACEAEFC001BB26C /* LifeCicle */ = {
+		CA939A602ACEAEFC001BB26C /* LifeCycle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CA939A752ACEAEFD001BB26C /* Build configuration list for PBXNativeTarget "LifeCicle" */;
+			buildConfigurationList = CA939A752ACEAEFD001BB26C /* Build configuration list for PBXNativeTarget "LifeCycle" */;
 			buildPhases = (
 				CA939A5D2ACEAEFC001BB26C /* Sources */,
 				CA939A5E2ACEAEFC001BB26C /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = LifeCicle;
+			name = LifeCycle;
 			productName = LifeCicle;
-			productReference = CA939A612ACEAEFC001BB26C /* LifeCicle.app */;
+			productReference = CA939A612ACEAEFC001BB26C /* LifeCycle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CA939A5C2ACEAEFC001BB26C /* Build configuration list for PBXProject "LifeCicle" */;
+			buildConfigurationList = CA939A5C2ACEAEFC001BB26C /* Build configuration list for PBXProject "LifeCycle" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CA939A602ACEAEFC001BB26C /* LifeCicle */,
+				CA939A602ACEAEFC001BB26C /* LifeCycle */,
 			);
 		};
 /* End PBXProject section */
@@ -293,7 +293,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PVS74PN984;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LifeCicle/Info.plist;
+				INFOPLIST_FILE = LifeCycle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -304,7 +304,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.LifeCicle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.LifeCycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -321,7 +321,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PVS74PN984;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LifeCicle/Info.plist;
+				INFOPLIST_FILE = LifeCycle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -332,7 +332,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.LifeCicle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.LifeCycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -343,7 +343,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CA939A5C2ACEAEFC001BB26C /* Build configuration list for PBXProject "LifeCicle" */ = {
+		CA939A5C2ACEAEFC001BB26C /* Build configuration list for PBXProject "LifeCycle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA939A732ACEAEFD001BB26C /* Debug */,
@@ -352,7 +352,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CA939A752ACEAEFD001BB26C /* Build configuration list for PBXNativeTarget "LifeCicle" */ = {
+		CA939A752ACEAEFD001BB26C /* Build configuration list for PBXNativeTarget "LifeCycle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA939A762ACEAEFD001BB26C /* Debug */,
