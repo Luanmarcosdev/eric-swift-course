@@ -11,7 +11,10 @@ These products were built using Xcode Version 14.3.1
 - [Project 2: Conversors](https://github.com/luanmarcosdev/eric-swift-course/tree/main/Conversors)
 - [Project 3: Lottery](https://github.com/luanmarcosdev/eric-swift-course/tree/main/Lottery)
 - [Project 4: SwiftQuiz](https://github.com/luanmarcosdev/eric-swift-course/tree/main/SwiftQuiz)
+- [Project 5: SuperPassword](https://github.com/luanmarcosdev/eric-swift-course/tree/main/SuperPassword)
+  
 - [Study Project 1: LifeCycle](https://github.com/luanmarcosdev/eric-swift-course/tree/main/LifeCycle)
 
+  
 ---
 I will update this repository as I progress with my studies
