@@ -17,8 +17,8 @@ class MessageColorViewController: BaseViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! ScreenColorViewController
-        vc.message = self.message
+        let viewController = segue.destination as! ScreenColorViewController
+        viewController.message = self.message
     }
             
 }

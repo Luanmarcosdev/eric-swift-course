@@ -15,21 +15,21 @@ class MessageViewController: BaseViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! MessageColorViewController
-        vc.message = self.message
+        
+        let viewController = segue.destination as! MessageColorViewController  //recupera a proxima ViewController e já trata ela como sendo MessageColorViewController
+        
+        
+        viewController.message = self.message
     }
     
-        
 }
 
 extension MessageViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        message.text = textField.text!
-        print(message.text!)
+        message.text = textField.text! //atribui o texto a struct
         lbMessage.text = textField.text!
-        print(lbMessage.text!)
         textField.resignFirstResponder() //esconde teclado
         
         return true

@@ -26,9 +26,9 @@ class ScreenColorViewController: BaseViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! ResultViewController
-        vc.message = self.message
-        vc.useWhiteBorder = swWhiteBorder.isOn
+        let viewController = segue.destination as! ResultViewController
+        viewController.message = self.message
+        viewController.useWhiteBorder = swWhiteBorder.isOn
     }
     
     @IBAction func changeBorder(_ sender: UISwitch) {

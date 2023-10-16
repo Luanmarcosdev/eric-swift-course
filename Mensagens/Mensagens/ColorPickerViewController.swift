@@ -27,12 +27,10 @@ class ColorPickerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
     @IBAction func chooseColor(_ sender: UIButton) {
         dismiss(animated: true)
         delegate?.applyColor(color: viColor.backgroundColor!)
     }
-    
     
     @IBAction func changeColor(_ sender: UISlider) {
         viColor.backgroundColor = UIColor(red: CGFloat(slRed.value), green: CGFloat(slGreen.value), blue: CGFloat(slBlue.value), alpha: 1.0)
