@@ -9,10 +9,18 @@ import UIKit
 
 class ShoppingViewController: UIViewController {
 
+    @IBOutlet weak var tfDolar: UITextField!
+    @IBOutlet weak var lbRealDescription: UIImageView!
+    @IBOutlet weak var lbReal: UILabel!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
+//    var dolar = tfDolar.text
+//    tc.dolar = self.dolar
 
 }
 
