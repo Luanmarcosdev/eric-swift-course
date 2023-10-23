@@ -13,6 +13,7 @@ These products were built using Xcode Version 14.3.1
 - [Project 4: SwiftQuiz](https://github.com/luanmarcosdev/eric-swift-course/tree/main/SwiftQuiz)
 - [Project 5: SuperPassword](https://github.com/luanmarcosdev/eric-swift-course/tree/main/SuperPassword)
 - [Project 6: Mensagens](https://github.com/luanmarcosdev/eric-swift-course/tree/main/Mensagens)
+- [Project 7: ShoppingUSA](https://github.com/luanmarcosdev/eric-swift-course/tree/main/ShoppingUSA)
   
 - [Study Project 1: LifeCycle](https://github.com/luanmarcosdev/eric-swift-course/tree/main/LifeCycle)
 
