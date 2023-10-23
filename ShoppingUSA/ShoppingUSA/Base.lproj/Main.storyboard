@@ -101,27 +101,27 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="ccC-G8-a8h"/>
                                 <exclude reference="OAA-3m-ObB"/>
                                 <exclude reference="PTn-WD-o1H"/>
-                                <exclude reference="ccC-G8-a8h"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
+                                <exclude reference="4XI-dp-z89"/>
+                                <include reference="ccC-G8-a8h"/>
                                 <include reference="H4b-MT-EKl"/>
                                 <include reference="OAA-3m-ObB"/>
                                 <include reference="PTn-WD-o1H"/>
                                 <exclude reference="QaU-A9-mm3"/>
                                 <exclude reference="dwc-Dx-yic"/>
-                                <exclude reference="4XI-dp-z89"/>
-                                <include reference="ccC-G8-a8h"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Compras" image="bag" id="A0q-9q-qTW"/>
                     <connections>
-                        <outlet property="lbReal" destination="5ob-ma-Rfd" id="VB9-o7-JgB"/>
-                        <outlet property="lbRealDescription" destination="Ax8-E9-WEL" id="UFA-iY-h0q"/>
+                        <outlet property="lbReal" destination="5ob-ma-Rfd" id="uad-pK-GaU"/>
+                        <outlet property="lbRealDescription" destination="Ax8-E9-WEL" id="nDv-dP-O4M"/>
                         <outlet property="tfDolar" destination="AC7-J6-SFw" id="XhE-Dp-MYW"/>
                     </connections>
                 </viewController>
@@ -156,7 +156,7 @@
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
                                                 </variation>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5.00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bku-Zk-q1I">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bku-Zk-q1I">
                                                 <rect key="frame" x="0.0" y="28.333333333333329" width="353" height="48"/>
                                                 <color key="backgroundColor" red="1" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" red="0.67450980392156867" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -165,6 +165,9 @@
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="62"/>
                                                 </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="KGZ-hg-xK6" id="TbM-R0-dqv"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <variation key="heightClass=regular-widthClass=regular" spacing="24"/>
@@ -181,7 +184,7 @@
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
                                                 </variation>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6.38" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6g-g7-Rvw">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6g-g7-Rvw">
                                                 <rect key="frame" x="0.0" y="28.333333333333314" width="353" height="48"/>
                                                 <color key="backgroundColor" red="0.77647058823529413" green="0.94901960784313721" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" red="0.0" green="0.50980392156862742" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -190,6 +193,9 @@
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="62"/>
                                                 </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="KGZ-hg-xK6" id="Dld-LB-yHY"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <variation key="heightClass=regular-widthClass=regular" spacing="24"/>
@@ -206,7 +212,7 @@
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
                                                 </variation>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="7.00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="soV-jd-3dR">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="soV-jd-3dR">
                                                 <rect key="frame" x="0.0" y="28.333333333333314" width="353" height="48"/>
                                                 <color key="backgroundColor" red="0.88235294117647056" green="0.96862745098039216" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" red="0.0" green="0.023529411764705882" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -215,6 +221,9 @@
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="62"/>
                                                 </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="KGZ-hg-xK6" id="KFJ-Y5-pXx"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <variation key="heightClass=regular-widthClass=regular" spacing="24"/>
@@ -334,8 +343,11 @@
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                         </variation>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ckN-hR-uI8">
-                                        <rect key="frame" x="324" y="117.66666666666669" width="51" height="31"/>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ckN-hR-uI8">
+                                        <rect key="frame" x="324" y="118" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="changeIOF:" destination="2C2-d2-MXk" eventType="valueChanged" id="YmK-zF-6Kl"/>
+                                        </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total em R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J98-M6-HhS">
                                         <rect key="frame" x="20.000000000000007" y="175.66666666666669" width="98.666666666666686" height="20.333333333333343"/>
