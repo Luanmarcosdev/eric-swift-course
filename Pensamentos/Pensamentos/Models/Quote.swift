@@ -13,7 +13,7 @@ struct Quote: Codable { //Encondable, Decodable
     let image: String
     
     var quoteFormatted: String {
-        return "〝" + quote + "〞"
+        return " “ " + quote + " ” "
     }
     
     var authorFormatted: String {

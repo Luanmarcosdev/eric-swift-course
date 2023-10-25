@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ppx-Sw-X9U">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ppx-Sw-X9U">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vD4-gg-R6T">
@@ -28,19 +28,19 @@
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w13-Bg-rA0">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="349"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="349"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="w13-Bg-rA0" secondAttribute="height" multiplier="750:666" id="2Ws-nv-9ar"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pensamento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lv4-5p-Ozl">
-                                <rect key="frame" x="30" y="359" width="333" height="47.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Pensamento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lv4-5p-Ozl">
+                                <rect key="frame" x="30" y="418" width="333" height="47.666666666666686"/>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dO8-wz-NkF">
-                                <rect key="frame" x="171.66666666666666" y="426.66666666666669" width="50" height="36"/>
+                                <rect key="frame" x="171.66666666666666" y="485.66666666666669" width="50" height="36.000000000000057"/>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
                                 <color key="textColor" red="0.75294117647058822" green="0.37647058823529411" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -56,7 +56,7 @@
                             <constraint firstAttribute="bottom" secondItem="vD4-gg-R6T" secondAttribute="bottom" id="DiD-Pb-5FI"/>
                             <constraint firstAttribute="trailing" secondItem="Ppx-Sw-X9U" secondAttribute="trailing" id="HyO-g0-Pei"/>
                             <constraint firstItem="lv4-5p-Ozl" firstAttribute="top" secondItem="w13-Bg-rA0" secondAttribute="bottom" constant="10" id="JgA-PV-Aa5"/>
-                            <constraint firstItem="w13-Bg-rA0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Kca-HN-xG5"/>
+                            <constraint firstItem="w13-Bg-rA0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Kca-HN-xG5"/>
                             <constraint firstAttribute="bottom" secondItem="Ppx-Sw-X9U" secondAttribute="bottom" id="MdL-1j-7DC"/>
                             <constraint firstItem="vD4-gg-R6T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NWq-NC-cRK"/>
                             <constraint firstItem="Ppx-Sw-X9U" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bB6-z3-Ylf"/>
@@ -70,11 +70,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Pensamentos" image="quotes" id="AOW-Jq-ggE"/>
                     <connections>
-                        <outlet property="ctTop" destination="JgA-PV-Aa5" id="qiO-Oh-Hit"/>
                         <outlet property="ivPhoto" destination="w13-Bg-rA0" id="Zhb-NC-wvp"/>
                         <outlet property="ivPhotoBg" destination="Ppx-Sw-X9U" id="xEE-tl-rkg"/>
                         <outlet property="lbAuthor" destination="dO8-wz-NkF" id="xbk-Om-w2E"/>
                         <outlet property="lbQuote" destination="lv4-5p-Ozl" id="LrN-ka-dn6"/>
+                        <outlet property="lcTop" destination="JgA-PV-Aa5" id="bNK-dH-jbK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -101,7 +101,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FGM-Ol-dyv">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FGM-Ol-dyv">
                                 <rect key="frame" x="172" y="100" width="51" height="31"/>
                                 <color key="onTintColor" red="0.75294117650000003" green="0.37647058820000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -226,6 +226,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Zr0-TF-uce" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LDq-4M-w0p">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.75294117650000003" green="0.37647058820000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="selectedImageTintColor" red="0.75294117650000003" green="0.37647058820000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
