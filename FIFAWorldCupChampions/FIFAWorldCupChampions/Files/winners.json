@@ -1,4 +1,136 @@
 [{
+    "year": 2022,
+    "country": "Catar",
+    "winner": "Argentina",
+    "vice": "França",
+    "winnerScore": "3(4)",
+    "viceScore": "3(2)",
+    "matches": [{
+            "stage": "Fase de grupos",
+            "games": [{
+                    "home": "Argentina",
+                    "away": "Arábia Saudita",
+                    "score": "1 x 2",
+                    "date": "22 de novembro"
+                },
+                {
+                    "home": "Argentina",
+                    "away": "México",
+                    "score": "2 x 0",
+                    "date": "26 de novembro"
+                },
+                {
+                    "home": "Polônia",
+                    "away": "Argentina",
+                    "score": "0 x 2",
+                    "date": "30 de novembro"
+                }
+            ]
+        },
+        {
+            "stage": "Oitavas de Final",
+            "games": [{
+                "home": "Argentina",
+                "away": "Austrália",
+                "score": "2 x 1",
+                "date": "3 de dezembro"
+            }]
+        },
+        {
+            "stage": "Quartas de Final",
+            "games": [{
+                "home": "Holanda",
+                "away": "Argentina",
+                "score": "(3)2 x 2(4)",
+                "date": "9 de dezembro"
+            }]
+        },
+        {
+            "stage": "Semifinais",
+            "games": [{
+                "home": "Argentina",
+                "away": "Croácia",
+                "score": "3 x 0",
+                "date": "13 de dezembro"
+            }]
+        },
+        {
+            "stage": "Final",
+            "games": [{
+                "home": "Argentina",
+                "away": "França",
+                "score": "(4)3 x 3(2)",
+                "date": "18 de dezembro"
+            }]
+        }
+    ]
+},{
+    "year": 2018,
+    "country": "Russia",
+    "winner": "França",
+    "vice": "Croácia",
+    "winnerScore": "4",
+    "viceScore": "2",
+    "matches": [{
+            "stage": "Fase de grupos",
+            "games": [{
+                    "home": "França",
+                    "away": "Austrália",
+                    "score": "2 x 1",
+                    "date": "16 de junho"
+                },
+                {
+                    "home": "França",
+                    "away": "Peru",
+                    "score": "1 x 0",
+                    "date": "21 de junho"
+                },
+                {
+                    "home": "Dinamarca",
+                    "away": "França",
+                    "score": "0 x 0",
+                    "date": "26 de junho"
+                }
+            ]
+        },
+        {
+            "stage": "Oitavas de Final",
+            "games": [{
+                "home": "França",
+                "away": "Argentina",
+                "score": "4 x 3",
+                "date": "30 de junho"
+            }]
+        },
+        {
+            "stage": "Quartas de Final",
+            "games": [{
+                "home": "Uruguai",
+                "away": "França",
+                "score": "0 x 2",
+                "date": "6 de julho"
+            }]
+        },
+        {
+            "stage": "Semifinais",
+            "games": [{
+                "home": "França",
+                "away": "Bélgica",
+                "score": "1 x 0",
+                "date": "10 de julho"
+            }]
+        },
+        {
+            "stage": "Final",
+            "games": [{
+                "home": "França",
+                "away": "Croácia",
+                "score": "4 x 2",
+                "date": "15 de julho"
+            }]
+        }
+    ]
+},{
 		"year": 2014,
 		"country": "Brasil",
 		"winner": "Alemanha",

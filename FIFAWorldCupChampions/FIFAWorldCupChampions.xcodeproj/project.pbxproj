@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA3203FB2AF1307000AB96AD /* GamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3203FA2AF1307000AB96AD /* GamesTableViewCell.swift */; };
 		CA7168DE2AEAF9620007B643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7168DD2AEAF9620007B643 /* AppDelegate.swift */; };
 		CA7168E02AEAF9620007B643 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7168DF2AEAF9620007B643 /* SceneDelegate.swift */; };
 		CA7168E52AEAF9620007B643 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7168E32AEAF9620007B643 /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA3203FA2AF1307000AB96AD /* GamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewCell.swift; sourceTree = "<group>"; };
 		CA7168DA2AEAF9620007B643 /* FIFAWorldCupChampions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIFAWorldCupChampions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7168DD2AEAF9620007B643 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA7168DF2AEAF9620007B643 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -246,8 +248,9 @@
 			isa = PBXGroup;
 			children = (
 				CA71695A2AEAFE330007B643 /* WinnersTableViewController.swift */,
-				CA71695C2AEAFE820007B643 /* WorldCupViewController.swift */,
 				CA71ACF12AF074E900C5221D /* WorldCupTableViewCell.swift */,
+				CA71695C2AEAFE820007B643 /* WorldCupViewController.swift */,
+				CA3203FA2AF1307000AB96AD /* GamesTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				CA71695B2AEAFE330007B643 /* WinnersTableViewController.swift in Sources */,
 				CA7168DE2AEAF9620007B643 /* AppDelegate.swift in Sources */,
 				CA71695F2AEAFEEC0007B643 /* WorldCup.swift in Sources */,
+				CA3203FB2AF1307000AB96AD /* GamesTableViewCell.swift in Sources */,
 				CA71ACF22AF074E900C5221D /* WorldCupTableViewCell.swift in Sources */,
 				CA7169612AEB010A0007B643 /* WorldCupManager.swift in Sources */,
 				CA71695D2AEAFE820007B643 /* WorldCupViewController.swift in Sources */,
