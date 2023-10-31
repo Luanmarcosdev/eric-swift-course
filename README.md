@@ -10,11 +10,12 @@ These products were built using Xcode Version 14.3.1
 - [Project 1: IMC](https://github.com/Luanmarcosdev/eric-swift-course/tree/main/IMC)
 - [Project 2: Conversors](https://github.com/luanmarcosdev/eric-swift-course/tree/main/Conversors)
 - [Project 3: Lottery](https://github.com/luanmarcosdev/eric-swift-course/tree/main/Lottery)
-- [Project 4: SwiftQuiz](https://github.com/luanmarcosdev/eric-swift-course/tree/main/SwiftQuiz)
-- [Project 5: SuperPassword](https://github.com/luanmarcosdev/eric-swift-course/tree/main/SuperPassword)
+- [Project 4: Swift Quiz](https://github.com/luanmarcosdev/eric-swift-course/tree/main/SwiftQuiz)
+- [Project 5: Super Password](https://github.com/luanmarcosdev/eric-swift-course/tree/main/SuperPassword)
 - [Project 6: Mensagens](https://github.com/luanmarcosdev/eric-swift-course/tree/main/Mensagens)
-- [Project 7: ShoppingUSA](https://github.com/luanmarcosdev/eric-swift-course/tree/main/ShoppingUSA)
+- [Project 7: Shopping USA](https://github.com/luanmarcosdev/eric-swift-course/tree/main/ShoppingUSA)
 - [Project 8: Pensamentos](https://github.com/luanmarcosdev/eric-swift-course/tree/main/Pensamentos)
+- [Project 9: FIFA World Cup Champions](https://github.com/luanmarcosdev/eric-swift-course/tree/main/FIFAWorldCupChampions)
   
 - [Study Project 1: LifeCycle](https://github.com/luanmarcosdev/eric-swift-course/tree/main/LifeCycle)
 
