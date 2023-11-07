@@ -10,6 +10,10 @@ import MapKit
 
 class MapViewController: UIViewController {
     
+    enum MapMessageType {
+        case routeError
+        case authorizationWarning
+    }
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapView: MKMapView!
@@ -20,12 +24,16 @@ class MapViewController: UIViewController {
     
     var places: [Place]!
     var poi: [MKAnnotation] = []
+    lazy var locationManager = CLLocationManager()
+    var btUserLocation: MKUserTrackingButton!
+    var selectedAnnotation: PlaceAnnotation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.isHidden = true
         viInfo.isHidden = true
         mapView.delegate = self
+        locationManager.delegate = self
         
         if places.count == 1 {
             title = places[0].name
@@ -37,11 +45,49 @@ class MapViewController: UIViewController {
             addToMap(place)
         }
         
+        configureLocationButton()
+        
         showPlaces()
+        requestUserLocationAuthorization()
     }
+    
+    func configureLocationButton() {
+        btUserLocation = MKUserTrackingButton(mapView: mapView)
+        btUserLocation.backgroundColor = .white
+        btUserLocation.frame.origin.x = 10
+        btUserLocation.frame.origin.y = 10
+        btUserLocation.layer.cornerRadius = 5
+        btUserLocation.layer.borderWidth = 1
+        btUserLocation.layer.borderColor = UIColor(named: "main")?.cgColor
+        
+    }
+    
+    func requestUserLocationAuthorization() {
+        if CLLocationManager.locationServicesEnabled() {
+            switch CLLocationManager.authorizationStatus() {
+                case .authorizedAlways, .authorizedWhenInUse:
+                    mapView.addSubview(btUserLocation)
+                case .denied:
+                    showMessage(type: .authorizationWarning)
+                case .notDetermined:
+                    locationManager.requestWhenInUseAuthorization()
+                case .restricted:
+                    break
+            }
+        } else {
+            // nao da
+        }
+    }
+
     
     func showPlaces() {
         mapView.showAnnotations(mapView.annotations, animated: true)
+    }
+    
+    func showInfo() {
+        lbName.text = selectedAnnotation?.title
+        lbAddress.text = selectedAnnotation?.address
+        viInfo.isHidden = false
     }
     
     func addToMap(_ place: Place){
@@ -57,6 +103,25 @@ class MapViewController: UIViewController {
     @IBAction func showSearchBar(_ sender: UIBarButtonItem) {
         searchBar.resignFirstResponder()
         searchBar.isHidden = !searchBar.isHidden
+    }
+    
+    func showMessage(type: MapMessageType) {
+        let title = type == .authorizationWarning ? "Aviso" : "Erro"
+        let message = type == .authorizationWarning ? "Para usar os recursos de localizacão do App, você precisa permitir o uso na tela de Ajustes" : "Não foi possivel encontrar essa rota"
+
+
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel)
+        alert.addAction(cancelAction)
+        if type == .authorizationWarning {
+            let confirmAction = UIAlertAction(title: "Ir para Ajustes", style: .default) { (action) in
+                if let appSettings = URL(string: UIApplicationOpenNotificationSettingsURLString) {
+                    UIApplication.shared.open(appSettings)
+                }
+            }
+            alert.addAction(confirmAction)
+        }
+        present(alert, animated: true)
     }
     
     
@@ -81,6 +146,18 @@ extension MapViewController: MKMapViewDelegate {
         annotationView?.displayPriority = type == .place ? .required : .defaultHigh
         
         return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        
+        let camera = MKMapCamera()
+        camera.centerCoordinate = view.annotation!.coordinate
+        camera.pitch = 80
+        camera.altitude = 100
+        mapView.setCamera(camera, animated: true)
+        
+        selectedAnnotation = (view.annotation as! PlaceAnnotation)
+        showInfo()
     }
 }
 
@@ -115,5 +192,22 @@ extension MapViewController: UISearchBarDelegate {
             self.loading.stopAnimating()
         }
         
+    }
+}
+
+extension MapViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedAlways, .authorizedWhenInUse:
+            mapView.showsUserLocation = true
+            mapView.addSubview(btUserLocation)
+            locationManager.startUpdatingLocation()
+        default:
+            break
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(locations.last!)
     }
 }
