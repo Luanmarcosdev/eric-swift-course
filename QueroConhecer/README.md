@@ -1,4 +1,4 @@
-# Project 9 - QueroConhecer
+# Project 10 - QueroConhecer
 
 Application developed using MVC, design pattern delegate, TableViews, UserDefaults and MapKit.
 
