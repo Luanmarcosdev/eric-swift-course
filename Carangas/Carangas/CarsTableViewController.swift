@@ -25,20 +25,31 @@ class CarsTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         } onError: { error in
-            switch error {
-            case .invalidJSON:
-                print("JSON inválido.")
-            case .noData:
-                print("Sem nenhum JSON.")
-            case .noResponse:
-                print("Sem resposta, erro durante a solicitação.")
-            case .url:
-                print("Erro na URL")
-            case .taskError(let error):
-                print(error)
-            case .responseStatusCode(let code):
-                print("Status Code \(code)")
-            }
+            self.errorType(with: error)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "viewSegue" {
+            let viewController = segue.destination as! CarViewController
+            viewController.car = cars[tableView.indexPathForSelectedRow!.row]
+        }
+    }
+    
+    func errorType(with error: CarError){
+        switch error {
+        case .invalidJSON:
+            print("JSON inválido.")
+        case .noData:
+            print("Sem nenhum JSON.")
+        case .noResponse:
+            print("Sem resposta, erro durante a solicitação.")
+        case .url:
+            print("Erro na URL")
+        case .taskError(let error):
+            print(error)
+        case .responseStatusCode(let code):
+            print("Status Code \(code)")
         }
     }
     
@@ -59,6 +70,25 @@ class CarsTableViewController: UITableViewController {
         
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
+        if editingStyle == .delete{
+            
+            let car = cars[indexPath.row]
+            
+            REST.delete(car: car) { sucess in
+                
+                self.cars.remove(at: indexPath.row)
+                
+                DispatchQueue.main.async {
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
+            } onError: { error in
+                self.errorType(with: error)
+            }
+            
+        }
     }
     
 }
