@@ -17,6 +17,8 @@ These products were built using Xcode Version 14.3.1
 - [Project 8: Pensamentos](https://github.com/luanmarcosdev/eric-swift-course/tree/main/Pensamentos)
 - [Project 9: FIFA World Cup Champions](https://github.com/luanmarcosdev/eric-swift-course/tree/main/FIFAWorldCupChampions)
 - [Project 10: Quero Conhecer](https://github.com/luanmarcosdev/eric-swift-course/tree/main/QueroConhecer)
+- [Project 11: Carangas](https://github.com/luanmarcosdev/eric-swift-course/tree/main/Carangas)
+
 
   
 - [Study Project 1: LifeCycle](https://github.com/luanmarcosdev/eric-swift-course/tree/main/LifeCycle)
