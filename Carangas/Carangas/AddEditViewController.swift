@@ -72,7 +72,7 @@ class AddEditViewController: UIViewController {
         }
     }
     
-    func errorType(with error: CarError){
+    func errorType(with error: ErrorAPI){
         switch error {
         case .invalidJSON:
             print("JSON inválido.")

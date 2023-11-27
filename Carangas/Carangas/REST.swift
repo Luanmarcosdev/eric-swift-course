@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum CarError {
+enum ErrorAPI {
     case url
     case taskError(error: Error)
     case noResponse
@@ -40,7 +40,7 @@ class REST {
     
     private static let session = URLSession(configuration: configuration) //URLSession.shared
     
-    class func loadCars(onComplete: @escaping ([Car]) -> Void, onError: @escaping (CarError) -> Void) {
+    class func loadCars(onComplete: @escaping ([Car]) -> Void, onError: @escaping (ErrorAPI) -> Void) {
         guard let url = URL(string: basePath) else {
             onError(.url)
             return
@@ -70,19 +70,19 @@ class REST {
         dataTask.resume()
     }
     
-    class func save(car: Car, onComplete: @escaping (Bool) -> Void, onError: @escaping (CarError) -> Void){
+    class func save(car: Car, onComplete: @escaping (Bool) -> Void, onError: @escaping (ErrorAPI) -> Void){
         applyOperation(car: car, operation: .save, onComplete: onComplete, onError: onError)
     }
     
-    class func update(car: Car, onComplete: @escaping (Bool) -> Void, onError: @escaping (CarError) -> Void){
+    class func update(car: Car, onComplete: @escaping (Bool) -> Void, onError: @escaping (ErrorAPI) -> Void){
         applyOperation(car: car, operation: .update, onComplete: onComplete, onError: onError)
     }
     
-    class func delete(car: Car, onComplete: @escaping (Bool) -> Void, onError: @escaping (CarError) -> Void){
+    class func delete(car: Car, onComplete: @escaping (Bool) -> Void, onError: @escaping (ErrorAPI) -> Void){
         applyOperation(car: car, operation: .delete, onComplete: onComplete, onError: onError)
     }
     
-    private class func applyOperation(car: Car, operation: RESTOperation, onComplete: @escaping (Bool) -> Void, onError: @escaping (CarError) -> Void){
+    private class func applyOperation(car: Car, operation: RESTOperation, onComplete: @escaping (Bool) -> Void, onError: @escaping (ErrorAPI) -> Void){
         guard let url = URL(string: "\(basePath)/\(car._id ?? "" )") else {
             onError(.url)
             return
