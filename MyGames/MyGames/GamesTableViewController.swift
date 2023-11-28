@@ -6,35 +6,65 @@
 //
 
 import UIKit
+import CoreData
 
 class GamesTableViewController: UITableViewController {
+    
+    var fetchedResultController: NSFetchedResultsController<Game>!
+    var label = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        label.text = "Você não tem jogos cadastrados"
+        label.textAlignment = .center
+        
+        loadGames()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    func loadGames() {
+        let fecthRequest = Game.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
+        fecthRequest.sortDescriptors = [sortDescriptor]
+        
+        fetchedResultController = NSFetchedResultsController(fetchRequest: fecthRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultController.delegate = self
+        do {
+            try fetchedResultController.performFetch()
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        let count = fetchedResultController.fetchedObjects?.count ?? 0
+        tableView.backgroundView = count == 0 ? label : nil
+        
+        return count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! GameTableViewCell
+        
+        guard let game = fetchedResultController.fetchedObjects?[indexPath.row] else {
+            return cell
+        }
+        
+        cell.prepare(with: game)
 
         return cell
     }
-    */
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -80,4 +110,18 @@ class GamesTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension GamesTableViewController: NSFetchedResultsControllerDelegate {
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+        
+        switch type{
+        case .delete:
+            break
+        default:
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
 }

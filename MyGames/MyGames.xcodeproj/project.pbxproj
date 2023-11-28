@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA13F1B62B15612C005BDD27 /* ViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13F1B52B15612C005BDD27 /* ViewController+CoreData.swift */; };
 		CA2B0CA32B14E96D0001F890 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2B0CA22B14E96D0001F890 /* AppDelegate.swift */; };
 		CA2B0CA52B14E96D0001F890 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2B0CA42B14E96D0001F890 /* SceneDelegate.swift */; };
 		CA2B0CA72B14E96D0001F890 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2B0CA62B14E96D0001F890 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA13F1B52B15612C005BDD27 /* ViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CoreData.swift"; sourceTree = "<group>"; };
 		CA2B0C9F2B14E96D0001F890 /* MyGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2B0CA22B14E96D0001F890 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA2B0CA42B14E96D0001F890 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				CA2B0CA42B14E96D0001F890 /* SceneDelegate.swift */,
 				CA2B0CA62B14E96D0001F890 /* ViewController.swift */,
 				CA2B0CA82B14E96D0001F890 /* Main.storyboard */,
+				CA13F1B52B15612C005BDD27 /* ViewController+CoreData.swift */,
 				CA2B0CB92B1521E30001F890 /* GamesTableViewController.swift */,
 				CA2B0CC12B15235C0001F890 /* GameTableViewCell.swift */,
 				CA2B0CBB2B1522080001F890 /* ConsolesTableViewController.swift */,
@@ -165,6 +168,7 @@
 				CA2B0CBC2B1522080001F890 /* ConsolesTableViewController.swift in Sources */,
 				CA2B0CBA2B1521E30001F890 /* GamesTableViewController.swift in Sources */,
 				CA2B0CAD2B14E96D0001F890 /* MyGames.xcdatamodeld in Sources */,
+				CA13F1B62B15612C005BDD27 /* ViewController+CoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +394,7 @@
 			currentVersion = CA2B0CAC2B14E96D0001F890 /* MyGames.xcdatamodel */;
 			path = MyGames.xcdatamodeld;
 			sourceTree = "<group>";
+			usesTabs = 0;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
