@@ -20,6 +20,7 @@
 		CA2B0CBE2B1522310001F890 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2B0CBD2B1522310001F890 /* GameViewController.swift */; };
 		CA2B0CC02B1522460001F890 /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2B0CBF2B1522460001F890 /* AddEditViewController.swift */; };
 		CA2B0CC22B15235C0001F890 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2B0CC12B15235C0001F890 /* GameTableViewCell.swift */; };
+		CA726AD92B17FC6B005AE30A /* ConsolesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA726AD82B17FC6B005AE30A /* ConsolesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		CA2B0CBD2B1522310001F890 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		CA2B0CBF2B1522460001F890 /* AddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
 		CA2B0CC12B15235C0001F890 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
+		CA726AD82B17FC6B005AE30A /* ConsolesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsolesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +78,10 @@
 				CA2B0CA82B14E96D0001F890 /* Main.storyboard */,
 				CA13F1B52B15612C005BDD27 /* ViewController+CoreData.swift */,
 				CA2B0CB92B1521E30001F890 /* GamesTableViewController.swift */,
-				CA2B0CC12B15235C0001F890 /* GameTableViewCell.swift */,
+				CA726AD82B17FC6B005AE30A /* ConsolesManager.swift */,
 				CA2B0CBB2B1522080001F890 /* ConsolesTableViewController.swift */,
 				CA2B0CBD2B1522310001F890 /* GameViewController.swift */,
+				CA2B0CC12B15235C0001F890 /* GameTableViewCell.swift */,
 				CA2B0CBF2B1522460001F890 /* AddEditViewController.swift */,
 				CA2B0CAE2B14E96E0001F890 /* Assets.xcassets */,
 				CA2B0CB02B14E96E0001F890 /* LaunchScreen.storyboard */,
@@ -167,6 +170,7 @@
 				CA2B0CC02B1522460001F890 /* AddEditViewController.swift in Sources */,
 				CA2B0CBC2B1522080001F890 /* ConsolesTableViewController.swift in Sources */,
 				CA2B0CBA2B1521E30001F890 /* GamesTableViewController.swift in Sources */,
+				CA726AD92B17FC6B005AE30A /* ConsolesManager.swift in Sources */,
 				CA2B0CAD2B14E96D0001F890 /* MyGames.xcdatamodeld in Sources */,
 				CA13F1B62B15612C005BDD27 /* ViewController+CoreData.swift in Sources */,
 			);
