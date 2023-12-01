@@ -12,6 +12,7 @@ class GamesTableViewController: UITableViewController {
     
     var fetchedResultController: NSFetchedResultsController<Game>!
     var label = UILabel()
+    let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,23 @@ class GamesTableViewController: UITableViewController {
         label.text = "Você não tem jogos cadastrados"
         label.textAlignment = .center
         
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.tintColor = .white
+        searchController.searchBar.barTintColor = .white
+        navigationItem.searchController = searchController
+        searchController.searchBar.delegate = self
+        
         loadGames()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gameSegue" {
+            let vc = segue.destination as! GameViewController
+            if let games = fetchedResultController.fetchedObjects {
+                vc.game = games[tableView.indexPathForSelectedRow!.row]
+            }
+            
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,10 +46,15 @@ class GamesTableViewController: UITableViewController {
         }
     }
     
-    func loadGames() {
+    func loadGames(filtering: String = "") {
         let fecthRequest = Game.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
         fecthRequest.sortDescriptors = [sortDescriptor]
+        
+        if !filtering.isEmpty {
+            let predicate = NSPredicate(format: "title contains [c] %@", filtering)
+            fecthRequest.predicate = predicate
+        }
         
         fetchedResultController = NSFetchedResultsController(fetchRequest: fecthRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         fetchedResultController.delegate = self
@@ -73,17 +95,18 @@ class GamesTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            guard let game = fetchedResultController.fetchedObjects?[indexPath.row] else {return}
+            context.delete(game)
+            do {
+                try context.save()
+            } catch {
+                print(error.localizedDescription)
+            }
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
 
     /*
     // Override to support rearranging the table view.
@@ -91,7 +114,6 @@ class GamesTableViewController: UITableViewController {
 
     }
     */
-
     /*
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
@@ -123,5 +145,21 @@ extension GamesTableViewController: NSFetchedResultsControllerDelegate {
                 self.tableView.reloadData()
             }
         }
+    }
+}
+
+extension GamesTableViewController: UISearchResultsUpdating, UISearchBarDelegate {
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        loadGames()
+        tableView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        loadGames(filtering: searchBar.text!)
+        tableView.reloadData()
     }
 }
