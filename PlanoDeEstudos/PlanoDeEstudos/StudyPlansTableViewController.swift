@@ -1,11 +1,3 @@
-//
-//  NotificationsTableViewController.swift
-//  PlanoDeEstudos
-//
-//  Created by Eric Brito
-//  Copyright © 2017 Eric Brito. All rights reserved.
-//
-
 import UIKit
 
 class StudyPlansTableViewController: UITableViewController {
@@ -42,7 +34,7 @@ class StudyPlansTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             studyManager.removePlan(at: indexPath.row)
-            tableView.reloadData()
+            tableView.deleteRows(at: [indexPath], with: .bottom)
         }
     }
 
