@@ -9,6 +9,13 @@
 import UIKit
 
 class StudyPlansTableViewController: UITableViewController {
+    
+    let studyManager = StudyManager.shared
+    let dateFormatter: DateFormatter = {
+        let df = DateFormatter()
+        df.dateFormat = "dd/MM/yy HH:mm"
+        return df
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,20 +23,26 @@ class StudyPlansTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return studyManager.studyPlans.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let studyPlan = studyManager.studyPlans[indexPath.row]
+        cell.textLabel?.text = studyPlan.section
+        cell.detailTextLabel?.text = dateFormatter.string(from: studyPlan.date)
         return cell
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            studyManager.removePlan(at: indexPath.row)
+            tableView.reloadData()
         }
     }
 
