@@ -19,6 +19,7 @@ These products were built using Xcode Version 14.3.1
 - [Project 10: Quero Conhecer](https://github.com/luanmarcosdev/eric-swift-course/tree/main/QueroConhecer)
 - [Project 11: Carangas](https://github.com/luanmarcosdev/eric-swift-course/tree/main/Carangas)
 - [Project 12: Skullibrista](https://github.com/luanmarcosdev/eric-swift-course/tree/main/skullibrista)
+- [Project 13: PlanoDeEstudos](https://github.com/luanmarcosdev/eric-swift-course/tree/main/PlanoDeEstudos)
 
 
 
