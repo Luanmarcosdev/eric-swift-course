@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (5.8.1)
+  - SwiftHash (2.0.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - SwiftHash
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SwiftHash
+
+SPEC CHECKSUMS:
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  SwiftHash: 6d312abe61c8359bdef8d0093642f3a70b1c17ba
+
+PODFILE CHECKSUM: 7b7cec7426b368e22515d5c0dfe613c1b9310dd8
+
+COCOAPODS: 1.15.2
